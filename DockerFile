@@ -1,0 +1,6 @@
+FROM openjdk:17-alpine
+LABEL Author="BrotherB"
+EXPOSE 8080
+ADD target/ems-docker-app.jar ems-docker-app.jar
+
+ENTRYPOINT ["java","-jar","/ems-docker-app.jar"]
